@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+<table id="godzina">
+  <tr>
+    <td id="data"></td>
+
+  </tr>
+</table>
+<br><br>
+    <table id="godzina">
+
+      <tr>
+        <td id="godzinnik"></td>
+        <td id="minutnik"></td>
+        <td id="sekundnik"></td>
+</tr>
+
+    </table>
+
+  <center>  <h1>Maksymilian Woś CV</h1></center>
+  <ol>
+    <li>Posługuje się</li>
+    <ul>
+      <li>PHP</li>
+      <li>C++</li>
+      <li>Python</li>
+      <li>CSS</li>
+      <li>HTML</li>
+      <li>JavaScript</li>
+      <li>SQL</li>
+    </ul>
+    <li>Znam języki:</li>
+    <ul>
+      <li>Angielski</li>
+      <li>Hiszpański</li>
+    </ul>
+    <li>Jestem:</li>
+    <ul>
+      <li>Punktualny</li>
+      <li>Odpowiedzilny</li>
+      <li>Pomocny</li>
+    </ul>
+    <li>Moimi zaintesowaniami są:</li>
+    <ul>
+      <li>Informatyka</li>
+      <li>Gry</li>
+    </ul>
+  </ol>
+
+
+
+
+  <script>
+
+
+  function zegar() {
+  var data = new Date();
+  var godzina = data.getHours();
+  var min = data.getMinutes();
+  var sek = data.getSeconds();
+
+
+  if (data.getHours() < 10) godzinnik.innerHTML = "0" + data.getHours();
+  else if (data.getHours() > 9) godzinnik.innerHTML = data.getHours();
+
+  if (data.getMinutes() < 10) minutnik.innerHTML = "0" + data.getMinutes();
+  else if (data.getMinutes() > 9) minutnik.innerHTML = data.getMinutes();
+
+  if (data.getSeconds() < 10) sekundnik.innerHTML = "0" + data.getSeconds();
+  else if (data.getSeconds() >9) sekundnik.innerHTML = data.getSeconds();
+}
+  setInterval("zegar()", 1000);
+var data = new Date();
+var tygodznia = data.getDate();
+var gdzien = data.getDay();
+var misiac = data.getMonth();
+var rok = data.getFullYear();
+
+
+if(gdzien == 0)
+{
+  document.getElementById("data").innerHTML = "Dzisiaj jest: Niedziela, ";
+}
+if(gdzien == 1)
+{
+  document.getElementById("data").innerHTML = "Dzisiaj jest: Poniedziałek, ";
+}
+if(gdzien == 2)
+{
+  document.getElementById("data").innerHTML = "Dzisiaj jest: Wtorek, ";
+}
+if(gdzien = 3)
+{
+  document.getElementById("data").innerHTML = "Dzisiaj jest: Środa, ";
+}
+if(gdzien == 4)
+{
+  document.getElementById("data").innerHTML = "Dzisiaj jest: Czwartek, ";
+}
+if(gdzien == 5)
+{
+  document.getElementById("data").innerHTML = "Dzisiaj jest: Piątek, ";
+}
+if(gdzien == 6)
+{
+  document.getElementById("data").innerHTML = "Dzisiaj jest: Sobota, ";
+}
+document.getElementById("data").innerHTML += tygodznia;
+if(misiac == 0)
+{
+  document.getElementById("data").innerHTML += " Stycznia ";
+}
+if(misiac == 1)
+{
+  document.getElementById("data").innerHTML += " Lutego ";
+}
+if(misiac == 2)
+{
+  document.getElementById("data").innerHTML += " Marca ";
+}
+if(misiac == 3)
+{
+  document.getElementById("data").innerHTML += " Kwietnia ";
+}
+if(misiac == 4)
+{
+  document.getElementById("data").innerHTML += " Maja ";
+}
+if(misiac == 5)
+{
+  document.getElementById("data").innerHTML += " Czerwca ";
+}
+if(misiac == 6)
+{
+  document.getElementById("data").innerHTML += " Lipca ";
+}
+if(misiac == 7)
+{
+  document.getElementById("data").innerHTML += " Sierpnia ";
+}
+if(misiac == 8)
+{
+  document.getElementById("data").innerHTML += " Września ";
+}
+if(misiac == 9)
+{
+  document.getElementById("data").innerHTML += " Października ";
+}
+if(misiac == 10)
+{
+  document.getElementById("data").innerHTML += " Listopada ";
+}
+if(misiac == 11)
+{
+  document.getElementById("data").innerHTML += " Grudnia ";
+}
+document.getElementById("data").innerHTML += rok;
+
+
+
+
+
+  </script>
+
+
+
+
+
+  </body>
+</html>
